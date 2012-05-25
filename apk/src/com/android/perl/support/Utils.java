@@ -104,7 +104,7 @@ public class Utils {
 		       if(file.getName().endsWith(".so")) {
 			       FileUtils.chmod(file, 0755);
 		       }
-		       // TODO perl permissions
+		       // TODO perl special permissions ?
 
 		       Log.d(GlobalConstants.LOG_TAG,"Unzip extracted " + dest + zipEntryName);
 		      }

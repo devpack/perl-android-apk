@@ -152,19 +152,12 @@ public class ScriptService extends ForegroundService {
 		ArrayList<String> args = new ArrayList<String>();
 		args.add(scriptName);
 		
-		// TODO
-		args.add("--foreground");
-
 		// env var
 		Map<String, String> environmentVariables = null;
 		environmentVariables = new HashMap<String, String>();
 		
-		// TODO perl env
-		
-//	    environmentVariables.put("PYTHONPATH", Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + this.getPackageName() + "/extras/python" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7");
-//	    environmentVariables.put("TEMP", Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + this.getPackageName() + "/extras/tmp");
-//	    environmentVariables.put("PYTHONHOME", this.getFilesDir().getAbsolutePath() + "/python");
-//	    environmentVariables.put("LD_LIBRARY_PATH", this.getFilesDir().getAbsolutePath() + "/python/lib" + ":" + this.getFilesDir().getAbsolutePath() + "/python/lib/python2.7/lib-dynload");			
+		// TODO more perl env ?
+	    environmentVariables.put("PERL5LIB", Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + this.getPackageName() + "/extras/perl/site_perl" + ":" + this.getFilesDir().getAbsolutePath() + "/perl/5.10.0");
 		
 		File perlBinary = new File(this.getFilesDir().getAbsolutePath() + "/perl/perl");
 		

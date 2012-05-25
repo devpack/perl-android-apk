@@ -187,9 +187,9 @@ public class ScriptActivity extends Activity {
 					}
 					// perl extras -> /sdcard/com.android.perl/perl/site-perl
 					else if (sFileName.endsWith(GlobalConstants.PERL_EXTRAS_ZIP_NAME)) {
-						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "perl");
-						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "perl" + "/" + "tmp");
-						succeed &= Utils.unzip(content, Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + this.getPackageName() + "/perl/", true);
+						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "extras");
+						Utils.createDirectoryOnExternalStorage( this.getPackageName() + "/" + "extras" + "/" + "tmp");
+						succeed &= Utils.unzip(content, Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + this.getPackageName() + "/extras/", true);
 					}
 					
 				} catch (Exception e) {
