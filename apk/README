@@ -1,0 +1,13 @@
+Under Apache License 2.0 
+
+Please see project page: https://code.google.com/p/android-python27/
+
+Creates an APK embedding Python 2.7 and your Python project. Your Python project files should be gathered in a .zip and put in res/raw folder, you then just need to set in GlobalConstants.java the script name (your project entry point) and your preferences. Once imported in Eclipse you may need to trigger a Project->clean to generate R.java
+
+
+NB: Once APK installed Python 2.7 can also be used from a shell, you just need before to:
+
+export PYTHONHOME=/data/data/com.android.python27/files/python
+export PYTHONPATH=/mnt/sdcard/com.android.python27/extras/python:/data/data/com.android.python27/files/python/lib/python2.7/lib-dynload:/data/data/com.android.python27/files/python/lib/python2.7
+export PATH=$PYTHONHOME/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.android.python27/files/python/lib:/data/data/com.android.python27/files/python/lib/python2.7/lib-dynload
