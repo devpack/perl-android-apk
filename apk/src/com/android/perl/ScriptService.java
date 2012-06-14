@@ -1,28 +1,43 @@
+/*
+ * Copyright (C) 2010 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+/*
+ * Copyright (C) 2012, Anthony Prieur & Daniel Oppenheim. All rights reserved.
+ *
+ * Original from SL4A modified to allow to embed Interpreter and scripts into an APK
+ */
+
 package com.android.perl;
 
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.Environment;
-import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
 
 import com.android.perl.config.GlobalConstants;
 import com.android.perl.process.MyScriptProcess;
 import com.googlecode.android_scripting.AndroidProxy;
-import com.googlecode.android_scripting.Constants;
-import com.googlecode.android_scripting.FeaturedInterpreters;
 import com.googlecode.android_scripting.ForegroundService;
 import com.googlecode.android_scripting.NotificationIdFactory;
-import com.googlecode.android_scripting.interpreter.Interpreter;
 import com.googlecode.android_scripting.jsonrpc.RpcReceiverManager;
 import com.googlecode.android_scripting.interpreter.InterpreterConfiguration;
-import com.googlecode.android_scripting.BaseApplication;
 
 import java.io.File;
 import java.util.ArrayList;
