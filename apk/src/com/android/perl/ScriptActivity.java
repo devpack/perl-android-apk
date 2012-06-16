@@ -45,7 +45,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class ScriptActivity extends Activity {
-	Button buttonInstall;
 	ProgressDialog myProgressDialog; 
 	  
 	@Override
@@ -65,15 +64,7 @@ public class ScriptActivity extends Activity {
 		
     	if(installNeeded) {
     		setContentView(R.layout.install);
-    	     
-    		buttonInstall = (Button)findViewById(R.id.startinstall);
-    		buttonInstall.setOnClickListener(new Button.OnClickListener(){
-
-    		@Override
-    		public void onClick(View v) {
-    		  new InstallAsyncTask().execute();
-    		  buttonInstall.setClickable(false);
-    		}});
+  		  	new InstallAsyncTask().execute();
     	}
     	else {
     	    runScriptService();
