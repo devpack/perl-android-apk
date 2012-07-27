@@ -196,7 +196,7 @@ public class ScriptActivity extends Activity {
 					// perl -> /data/data/com.android.perl/files/perl
 					else if (sFileName.endsWith(GlobalConstants.PERL_ZIP_NAME)) {
 						succeed &= Utils.unzip(content, this.getFilesDir().getAbsolutePath()+ "/", true);
-						FileUtils.chmod(new File(this.getFilesDir().getAbsolutePath()+ "/perl/perl" ), 755);
+						FileUtils.chmod(new File(this.getFilesDir().getAbsolutePath()+ "/perl/perl" ), 0755);
 					}
 					// perl extras -> /sdcard/com.android.perl/perl/site-perl
 					else if (sFileName.endsWith(GlobalConstants.PERL_EXTRAS_ZIP_NAME)) {
